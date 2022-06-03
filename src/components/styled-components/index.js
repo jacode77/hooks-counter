@@ -46,6 +46,9 @@ export const Heading = styled.h1`
 
 export const Warning = styled.h1`
   font-size: 5rem;
+  margin-bottom: 0;
   color: red;
-  ${(props) => (props.centered ? "align-self: center" : "")}
+  position: absolute;
+  top: 0;
+  ${(props) => (props.centered ? "align-self: center" : "")};
 `;
