@@ -28,6 +28,7 @@ export const CenteredBox = styled.div`
   flex-direction: ${(props) => props.direction || "row"};
   align-content: center;
   justify-content: center;
+  align-items: center;
   height: ${(props) => (props.height ? props.height : "80vh")};
   max-width: 100%;
 `;

@@ -24,6 +24,13 @@ export const Counter = (props) => {
     document.title = `Capacity: ${capacity}`;
   }, [capacity]);
 
+  useEffect(() => {
+    if (count > capacity) setWarning("Over Capacity");
+    else if (count === capacity) setWarning("At Capacity");
+    else if (count < capacity) setWarning("");
+    // if either count or capacity change the callback will run again and render as required
+  }, [count, capacity]);
+
   //   return is purely jsx
   return (
     <>
